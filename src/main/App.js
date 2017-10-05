@@ -4,6 +4,7 @@ import Routes from './Routes';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
+import '../template/custom.css';
 
 class App extends Component {
 	render(){
