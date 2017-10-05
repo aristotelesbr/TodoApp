@@ -25,7 +25,8 @@ export default class TodoList extends Component {
 			<table className='table'>
 				<thead>
 					<tr>
-						<td>Descrição</td>
+						<th>Descrição</th>
+						<th className='tableAction'>Ações</th>
 					</tr>
 				</thead>
 				<tbody>
