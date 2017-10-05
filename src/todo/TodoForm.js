@@ -11,11 +11,13 @@ export default class TodoForm extends Component {
 					<input 
 						id='description' 
 						className='form-control' 
-						placeholder='Adicione uma tarefa'>
+						placeholder='Adicione uma tarefa'
+						onChange={this.props.handleChange}
+						value={this.props.description}>
 					</input>
 				</Grid>
 				<Grid cols='12 3 2'>
-					<IconButton style='primary' icon='plus' />
+					<IconButton style='primary' icon='plus' onClick={this.props.handleAdd} />
 				</Grid>
 			</div>
 		)
