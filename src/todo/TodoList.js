@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+// import Redux setings
+import { connect } from 'react-redux'
 import IconButton from '../template/IconButton';
 
-export default class TodoList extends Component {
+class TodoList extends Component {
 	render() {
 
 		const renderRows = () => {
@@ -36,3 +38,7 @@ export default class TodoList extends Component {
 		)
 	}
 }
+// mapping state
+const mapStateToProps = state => ({list: state.todo.list})
+// conneting this component with static list of reducers
+export default connect(mapStateToProps)(TodoList)
