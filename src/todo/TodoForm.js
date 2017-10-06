@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Grid from '../template/Grid';
 import IconButton from '../template/IconButton';
 
-export default class TodoForm extends Component {
+class TodoForm extends Component {
 	render() {
 		const keyHandler = (e) => {
 			if (e.key === 'Enter') {
@@ -34,3 +35,5 @@ export default class TodoForm extends Component {
 		)
 	}
 }
+const mapStateToProps = state => ({ description: state.todo.description })
+export default connect(mapStateToProps)(TodoForm)
